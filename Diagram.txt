@@ -1,0 +1,91 @@
++----------------------+
+|  LoanApplication     |
++----------------------+
+| - applicationId: int |
+| - companyName: String|
+| - loanType: String   |
+| - loanAmount: double |
+| - status: String     |
+| - submissionDate:    |
+|                 Date |
++----------------------+
+| +submitApplication() |
+| +trackStatus()       |
+| +viewDetails()       |
++----------------------+
+ 
+         ▲
+         |
+         | 1
+         |
+         | 1..*
++-------------------------+
+| CreditEvaluation        |
++-------------------------+
+| - evaluationId: int     |
+| - applicationId: int    |
+| - creditScore: int      |
+| - riskScore: double     |
+| - evaluationDate: Date  |
++-------------------------+
+| +evaluateCredit()       |
+| +getRiskScore()         |
++-------------------------+
+ 
+         ▲
+         |
+         | 1
+         |
+         | 1..*
++------------------------+
+| Document               |
++------------------------+
+| - documentId: int      |
+| - applicationId: int   |
+| - documentType: String |
+| - filePath: String     |
+| - uploadDate: Date     |
+| - isValid: boolean     |
++------------------------+
+| +uploadDocument()      |
+| +validateDocument()    |
++------------------------+
+ 
+         ▲
+         |
+         | 1
+         |
+         | 1..*
++----------------------------+
+| Approval                  |
++----------------------------+
+| - approvalId: int         |
+| - applicationId: int      |
+| - approverId: int         |
+| - approvalLevel: int      |
+| - approvalStatus: String  |
+| - comments: String        |
+| - approvalDate: Date      |
++----------------------------+
+| +approveLoan()            |
+| +rejectLoan()             |
+| +viewStatus()             |
++----------------------------+
+ 
+         ▲
+         |
+         | 1
+         |
+         | 0..1
++-----------------------------+
+| Disbursement                |
++-----------------------------+
+| - disbursementId: int       |
+| - applicationId: int        |
+| - disbursedAmount: double   |
+| - disbursementDate: Date    |
+| - repaymentSchedule: String |
++-----------------------------+
+| +trackDisbursement()        |
+| +generateReport()           |
++-----------------------------+
