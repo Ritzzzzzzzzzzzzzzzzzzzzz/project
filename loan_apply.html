@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loan Application Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .form-title {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container form-container">
+    <h2 class="form-title">Loan Application Form</h2>
+    <form id="loanForm">
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullName" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" required />
+      </div>
+      <div class="mb-3">
+        <label for="businessName" class="form-label">Business Name</label>
+        <input type="text" class="form-control" id="businessName" required />
+      </div>
+      <div class="mb-3">
+        <label for="loanAmount" class="form-label">Loan Amount Requested (INR)</label>
+        <input type="number" class="form-control" id="loanAmount" required />
+      </div>
+      <div class="mb-3">
+        <label for="loanPurpose" class="form-label">Purpose of Loan</label>
+        <textarea class="form-control" id="loanPurpose" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="annualRevenue" class="form-label">Annual Business Revenue (INR)</label>
+        <input type="number" class="form-control" id="annualRevenue" required />
+      </div>
+      <div class="mb-3">
+        <label for="existingDebt" class="form-label">Existing Business Debt (INR)</label>
+        <input type="number" class="form-control" id="existingDebt" required />
+      </div>
+      <!-- New File Upload Section -->
+      <div class="mb-3">
+        <label for="uploadDocument" class="form-label">Upload Document</label>
+        <input type="file" class="form-control" id="uploadDocument" required />
+        <small class="form-text text-muted">Please upload relevant business documents (PDF, DOCX, JPG, etc.)</small>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
